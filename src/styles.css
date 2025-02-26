@@ -1,0 +1,121 @@
+body {
+  background: #ece0d1;
+  color: #3e2723;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 420px;
+  background: #f5f5dc;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
+    -10px -10px 20px rgba(255, 255, 255, 0.6);
+  animation: fadeIn 1s;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5d4037;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #bcaaa4;
+  outline: none;
+  background: #faf3e0;
+  color: #5d4037;
+  transition: background 0.3s;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+.add-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background: #8d6e63;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+    -4px -4px 10px rgba(255, 255, 255, 0.6);
+}
+
+.add-button:hover {
+  transform: scale(1.05);
+}
+
+.habit-card {
+  background: #d7ccc8;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2),
+    -6px -6px 12px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s;
+}
+
+.habit-card:hover {
+  transform: scale(1.03);
+}
+
+.delete-button {
+  background: #a1887f;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    -2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+.delete-button:hover {
+  background: #8d6e63;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
